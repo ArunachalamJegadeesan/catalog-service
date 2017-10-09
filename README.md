@@ -19,7 +19,7 @@ gradle build
 gradle bootrun
 
 
-Invoking endpoints
+
 curl -X POST -H 'content-type: application/json;charset=UTF-8'  -d '{"productName":"HD SetupBox", "usoc":"H23123", "regionCode":"Chicago","stateCode":"IL","isAvailable":"Yes"}' http://localhost:7070/catalog
 
 curl -X GET http://localhost:7070/catalog
