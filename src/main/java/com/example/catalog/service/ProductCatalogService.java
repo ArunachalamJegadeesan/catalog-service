@@ -15,7 +15,7 @@ import java.util.Map;
 @RequestMapping("/catalog")
 public class ProductCatalogService {
 
-    @Autowired // This means to get the bean called userRepository
+    @Autowired 
     private ProductCatalogRepository catalogRepository;
 
     @RequestMapping(method = RequestMethod.POST)
@@ -28,7 +28,8 @@ public class ProductCatalogService {
         pcl.setUsoc(map.get("usoc"));
         pcl.setRegionCode(map.get("regionCode"));
         pcl.setStateCode(map.get("stateCode"));
-        pcl.setAvailable(map.get("isAvailable").equals("Y")?true:false);
+        //pcl.setAvailable(map.get("isAvailable").equals("Y")?true:false);
+        pcl.setAvailable(true);
         catalogRepository.save(pcl);
         return "Created"+ pcl.getId();
     }
