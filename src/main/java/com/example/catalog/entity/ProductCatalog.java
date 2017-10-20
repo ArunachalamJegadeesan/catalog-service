@@ -53,12 +53,12 @@ public class ProductCatalog implements Serializable {
         this.stateCode = stateCode;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
+    public String getAvailable() {
+        return available;
     }
 
-    public void setAvailable(boolean available) {
-        isAvailable = available;
+    public void setAvailable(String available) {
+        this.available = available;
     }
 
 
@@ -77,26 +77,26 @@ public class ProductCatalog implements Serializable {
     private String stateCode;
 
 
-    private boolean isAvailable = false;
+    private String available ;
 
 
     public ProductCatalog(){
 
     }
 
-    public ProductCatalog(String ProductName, String usoc,
-                          String regionCode, String stateCode, boolean isAvailable){
+    public ProductCatalog(String productName, String usoc,
+                          String regionCode, String stateCode, String available){
         this.productName=productName;
         this.usoc=usoc;
         this.regionCode=regionCode;
         this.stateCode=stateCode;
-        this.isAvailable=isAvailable;
+        this.available=available;
 
     }
 
     public String toString(){
 
-        if (isAvailable)
+        if (available.equals("Y"))
         return productName +" available in  region"+ regionCode+ "of the state "+stateCode +"(usoc :"+usoc+")";
         else
             return productName +"  not available in  region"+ regionCode+ "of the state "+stateCode +"(usoc :"+usoc+")";
