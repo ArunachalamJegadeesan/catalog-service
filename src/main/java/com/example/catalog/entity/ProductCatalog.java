@@ -97,9 +97,9 @@ public class ProductCatalog implements Serializable {
     public String toString(){
 
         if (available.equals("Y"))
-        return productName +" available in  region"+ regionCode+ "of the state "+stateCode +"(usoc :"+usoc+")";
+        return productName +" available in  region"+ regionCode+ " of the state "+stateCode +" (usoc :"+usoc+")";
         else
-            return productName +"  not available in  region"+ regionCode+ "of the state "+stateCode +"(usoc :"+usoc+")";
+            return productName +"  not available in  region "+ regionCode+ " of the state "+stateCode +" (usoc :"+usoc+")";
     }
 
 
