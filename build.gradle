@@ -1,9 +1,9 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.6.RELEASE'
+		springBootVersion = '1.5.8.RELEASE'
 	}
 	repositories {
-		mavenCentral()
+	mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -20,7 +20,7 @@ sourceCompatibility = 1.8
 
 repositories {	
 	mavenCentral()
-	jcenter()	
+	
 }
 
 
@@ -28,9 +28,11 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtime 'com.h2database:h2'	
-	//compile 'io.springfox:springfox-swagger2:2.7.0'
-	//compile 'io.springfox:springfox-swagger-ui:2.7.0'	
+	compile 'io.springfox:springfox-swagger2:2.7.0'
+	compile 'io.springfox:springfox-swagger-ui:2.7.0'	
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}
